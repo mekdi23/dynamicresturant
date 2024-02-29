@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    
+    <div class="container-fluid hero-header bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">About Us</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#index">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{% static 'img/logo.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+   
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                {% for about_item in about_data %}
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid" src="{% static 'img/about.png' %}" alt="">
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <h1 class="display-6">{{ about_item.title }}</h1>
+                        <p class="text-primary fs-5 mb-4">{{ about_item.description }}</p>
+                        <p>{{ about_item.bullet_points|linebreaksbr }}</p>
+                        <h2>Our Story</h2>
+                        <p>We started Mekdi Restaurant with a simple idea: to bring authentic Ethiopian cuisine to our community. What began as a small family-owned restaurant has now grown into a beloved establishment known for its delicious food and warm hospitality.</p>
+                        <p>Our journey has been filled with passion for Ethiopian flavors and dedication to providing an unforgettable dining experience. From our traditional recipes passed down through generations to our commitment to sourcing the freshest ingredients, every aspect of Mekdi Restaurant reflects our love for Ethiopian culture and cuisine.</p>
+                        <p>As we continue to grow and evolve, our mission remains the same: to share the rich culinary heritage of Ethiopia with our guests and create memories that last a lifetime.</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>
+

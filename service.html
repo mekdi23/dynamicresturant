@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+   
+    <div class="container-fluid hero-header bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">Our menu</h1>
+                    <p class="animated slideInDown">book for your services</p>
+                    <a href="#" class="btn btn-primary py-3 px-4 animated slideInDown">View Menu</a>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;"src="{% static 'img/front.png' %}" alt="Restaurant Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <section id="menu">
+            <h2>Explore Our Ethiopian Cuisine</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'img/kitfo.jpg' %}" class="card-img-top" alt="Kitfo">
+                        <div class="card-body">
+                            <h5 class="card-title">Kitfo</h5>
+                            <p class="card-text">Kitfo is a traditional Ethiopian dish that consists of minced raw beef, seasoned with spices and served with injera, a type of Ethiopian flatbread. It is a popular dish in Ethiopian cuisine, particularly in the Gurage and Harari regions.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'img/shro.jpg' %}" class="card-img-top" alt="Shiro Wet">
+                        <div class="card-body">
+                            <h5 class="card-title">Shiro Wet</h5>
+                            <p class="card-text">Shiro wet is a traditional Ethiopian stew made from ground chickpeas or lentils, simmered with onions, garlic, and spices, offering a flavorful and hearty vegan dish in Ethiopian cuisine.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'img/ingera.jpg' %}" class="card-img-top" alt="Injera">
+                        <div class="card-body">
+                            <h5 class="card-title">Injera</h5>
+                            <p class="card-text">Injera is a sourdough flatbread originating from Ethiopia and Eritrea, characterized by its spongy texture and tangy flavor, commonly used as a staple accompaniment to various Ethiopian dishes, serving as both a utensil and a food item.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
